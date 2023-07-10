@@ -143,7 +143,7 @@ void EnumGenerator::GenerateHeader(io::Printer* printer) const {
                    },
                    R"objc(
                      $comments$
-                     $name$$deprecated_attribute$ = $value$,
+                     $name$$ deprecated_attribute$ = $value$,
                    )objc");
                add_leading_newilne = true;
              }
@@ -153,7 +153,7 @@ void EnumGenerator::GenerateHeader(io::Printer* printer) const {
         #pragma mark - Enum $enum_name$
 
         $enum_comments$
-        typedef$enum_deprecated_attribute$ GPB_ENUM($enum_name$) {
+        typedef$ enum_deprecated_attribute$ GPB_ENUM($enum_name$) {
           $maybe_unknown_value$
           $enum_values$
         };
